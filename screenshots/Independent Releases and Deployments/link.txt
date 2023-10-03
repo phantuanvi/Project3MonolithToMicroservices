@@ -1,0 +1,5 @@
+Travis CI log
+https://api.travis-ci.com/v3/job/610896160/log.txt
+
+Docker repositories
+https://hub.docker.com/repositories/phantuanvi
