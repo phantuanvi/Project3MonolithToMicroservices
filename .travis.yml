@@ -10,12 +10,12 @@ services:
 
 script:
 ## Build
-  - docker-compose -f docker-compose-build.yaml build --parallel
+  - docker-compose -f docker-compose-build.yaml build
 ## Tagging
-  - docker tag udagram-api-feed phantuanvi/udagram-api-feed
-  - docker tag udagram-api-user phantuanvi/udagram-api-user
-  - docker tag udagram-frontend phantuanvi/udagram-frontend
-  - docker tag reverseproxy phantuanvi/reverseproxy
+  - docker tag udagram-api-feed phantuanvi/udagram-api-feed:latest
+  - docker tag udagram-api-user phantuanvi/udagram-api-user:latest
+  - docker tag udagram-frontend phantuanvi/udagram-frontend:latest
+  - docker tag reverseproxy phantuanvi/reverseproxy:latest
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 ## Push
