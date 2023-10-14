@@ -1,3 +1,7 @@
+kubectl delete deployment backend-user
+kubectl delete services backend-user
+kubectl delete deployment backend-feed
+kubectl delete services backend-feed
 ## Apply env variables and secrets
 kubectl apply -f aws-secret.yaml
 kubectl apply -f env-secret.yaml
